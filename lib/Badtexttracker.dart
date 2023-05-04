@@ -48,7 +48,10 @@ class _BadTextTrackerState extends State<BadTextTracker> {
                   onPressed: () async {
                     setState(() {});
                     dynamic d = await ServiceProvider().Textcheck('');
+                    // dynamic c = await ServiceProvider().Textidentifier();
+                    // print(c.body.toString());
                     text = d.body.toString();
+                    print(text);
                   },
                   child: const Text('GET')),
             ],
